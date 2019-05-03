@@ -21,10 +21,10 @@ pipeline {
         sh 'JUNIT_REPORT_PATH=./test-results.xml ./node_modules/mocha/bin/mocha --reporter mocha-jenkins-reporter'
       }
     }
-    stage('Capture Test Results') {
-      steps {
-        junit 'test-results.xml'
-      }
+  }
+  post {
+    always {
+      junit 'test-results.xml'
     }
   }
 }

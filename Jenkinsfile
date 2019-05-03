@@ -11,5 +11,20 @@ pipeline {
         sh 'cat file-2.txt'
       }
     }
+    stage('npm install') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Run Tests') {
+      steps {
+        sh 'node_modules/mocha/bin/mocha --reporter mocha-junit-reporter'
+      }
+    }
+    stage('Capture Test Results') {
+      steps {
+        junit 'test-results.xml'
+      }
+    }
   }
 }

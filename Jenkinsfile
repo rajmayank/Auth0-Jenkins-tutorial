@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Run Tests') {
       steps {
-        sh 'node_modules/mocha/bin/mocha --reporter mocha-junit-reporter'
+        sh 'JUNIT_REPORT_PATH=./test-results.xml ./node_modules/mocha/bin/mocha --reporter mocha-jenkins-reporter'
       }
     }
     stage('Capture Test Results') {

@@ -1,0 +1,24 @@
+{
+  "name": "jenkins-tutorials",
+  "version": "1.0.0",
+  "description": "Jenkins Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajmayank/Auth0-Jenkins-tutorial.git"
+  },
+  "author": "Mayank Raj <mayank@mayankraj.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajmayank/Auth0-Jenkins-tutorial/issues"
+  },
+  "homepage": "https://github.com/rajmayank/Auth0-Jenkins-tutorial#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "mocha-junit-reporter": "^1.22.0"
+  }
+}
